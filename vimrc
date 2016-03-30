@@ -41,6 +41,8 @@ filetype off
       Plug 'junegunn/vim-easy-align'
       xmap ga <Plug>(EasyAlign)
       nmap ga <Plug>(EasyAlign)
+      Plug 'tomtom/tcomment_vim'
+      Plug 'chriskempson/vim-tomorrow-theme'
   " }}}
   " python {{{
       Plug 'klen/python-mode', {'for' : 'python'}
@@ -70,7 +72,7 @@ filetype off
       Plug 'mattn/emmet-vim', {'for' : ['htmldjango', 'html', 'liquid', 'html.handlebars']}
   " }}}
   " js {{{
-      Plug 'pangloss/vim-javascript' 
+      Plug 'pangloss/vim-javascript'
       Plug 'mklabs/grunt.vim'
       Plug 'isRuslan/vim-es6'
       Plug 'mxw/vim-jsx'
@@ -327,7 +329,7 @@ filetype plugin indent on
         let g:pymode_breakpoint = 1
         let g:pymode_syntax = 1
         let g:pymode_doc_bind = '<C-k>'
-        let g:pymode_syntax_builtin_objs = 1
+        let g:pymode_syntaxbuiltin_objs = 1
         let g:pymode_syntax_builtin_funcs = 1
         let g:pymode_rope = 0
         let g:pymode_rope_extended_complete = 0
@@ -499,15 +501,16 @@ au BufWritePre * :set binary | set noeol
 au BufWritePost * :set nobinary | set eol
 
 syntax enable
+set rnu
 set background=dark
 set colorcolumn=""
 if has('gui_running')
     if has('gui_macvim')
       set guifont=Input\ Mono\ Condensed:h14
-      colorscheme spacegray
+      colorscheme Tomorrow-Night-Eighties
       set bg=dark
       set lsp=3
-      set transparency=5
+      set transparency=3
       set fuopt+=maxhorz
       set fuopt+=maxvert
       set nofu
@@ -692,4 +695,8 @@ endif
   nnoremap k gk
   xnoremap j gj
   xnoremap k gk
+  nnoremap ; :
+  map <c-h> :nohl<CR>,
+  :imap jk <Esc>
+  nnoremap <C-i> :NERDTreeToggle<CR>
 " }}}

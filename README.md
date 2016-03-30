@@ -1,5 +1,9 @@
 # Description
-This is the vim configuration that I am using. Feel free to use it.
+This is the vim configuration that I ripped off from [KHZ](https://github.com/khzaw).
+
+The original of his is [here](https://github.com/khzaw/dotvim)
+
+All the following instructions are drafted by him and the confiruratons are his. I just twisted abit to meet some of my requirements and plugins for my mvim. 
 
 # Installation
 If you have current vim setup, make a backup first.
